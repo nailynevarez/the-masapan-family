@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+http://pedantic-saha-c48035.netlify.com/* http://www.themasapanfamily.com/:splat 301!

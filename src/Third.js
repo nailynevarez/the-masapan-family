@@ -5,7 +5,7 @@ import './App.css';
 
 
 
-export default class Second extends Component {
+export default class Third extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -13,15 +13,15 @@ export default class Second extends Component {
   }
 
   handleButtonClick = (event) => {
-    let pageName = "third";
+    let pageName = "fourth";
     this.props.switchPageFunction(pageName);
     }
 
 
   render() {
     return (
-      <div className="Second">
-  <button onClick = {this.handleButtonClick.bind(this)}>This is the second scene.</button>
+      <div className="Third">
+  <button onClick = {this.handleButtonClick.bind(this)}>This is the third scene.</button>
       </div>
     );
   }

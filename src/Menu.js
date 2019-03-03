@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { PropTypes } from 'react';
+import './Menu.css';
 import './App.css';
-import Sound from 'react-sound';
-import sound from './song.mp3';
+
 import hand from './Menu-Hand.gif';
 import circle from './Menu-Circle.png';
 import button from './Menu-Button.png';
@@ -10,34 +11,36 @@ import button from './Menu-Button.png';
 export default class Menu extends Component {
   constructor(props){
     super(props);
+    this.handleButtonClick = this.handleButtonClick.bind(this);
     this.state = {
-      activePage: 'menu',
+      showMenu: true,
+      showButtonHand: true,
     };
   }
 
-  handleButtonClick(e, {name}) {
+  handleButtonClick = (event) => {
+    this.setState({
+      showButtonHand: false,
+    });
+    setTimeout(() => {
       this.setState({
-        activeItem: name,
+        showMenu: false,
       });
+    }, 1500);
+    let pageName = "first";
+    this.props.switchPageFunction(pageName);
     }
 
 
   render() {
     return (
-      <div className="Menu">
-      <Sound
-      url={sound}
-      playStatus={Sound.status.PLAYING}
-      playFromPosition={300 /* in milliseconds */}
-      onLoading={this.handleSongLoading}
-      onPlaying={this.handleSongPlaying}
-      onFinishedPlaying={this.handleSongPlaying}
-    />
-
-          <img src={hand} className="Menu-Hand" alt="hand" />
+      <div>
+        <div className = {this.state.showMenu ? 'fadeIn' : 'fadeOut'}>
           <img src={circle} className="Menu-Circle" alt="circle" />
-        <div className = "Menu-Button-Div">
-          <img src= {button} className = "Menu-Button"/>
+        </div>
+        <div className = {this.state.showButtonHand ? 'fadeIn' : 'fadeOut'}>
+        <img src={hand} className="Menu-Hand" alt="hand"/>
+        <img src={button} className="Menu-Button" onClick={this.handleButtonClick.bind(this)}/>
         </div>
       </div>
     );

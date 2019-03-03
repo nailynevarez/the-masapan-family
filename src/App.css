@@ -1,33 +1,68 @@
 .App {
   text-align: center;
 }
+
+* {
+  cursor: url("Mouse2.cur"), auto;
+}
+
 html {
   background:  url("Menu-Background.gif") no-repeat center center fixed;
   background-size: cover;
+  overflow-y: hidden;
 
 }
 
-img {
+.fadeIn {
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  animation: fadeIn 1s; }
 
-  height: 100%;
-  width: 100%;
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-o-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
-}
+.fadeOut {
+  -webkit-animation: fadeOut 1s forwards;
+  -moz-animation: fadeOut 1s forwards;
+  -o-animation: fadeOut 1s forwards;
+  animation: fadeOut 1s forwards; }
 
-.Menu-Circle {
-  position: relative;
-}
-.Menu-Hand {
-
-  position: absolute;
-}
-.Menu-Button-Div {
-  position: absolute;
-  top: 590px;
-  left: 535px;
-  height: 10%;
-  width: 15%;
-}
-.Menu-Button-Div:hover {
-  opacity: .80;
-}
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+@-moz-keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+@-o-keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }

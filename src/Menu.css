@@ -1,0 +1,42 @@
+img {
+
+  height: 100%;
+  width: 100%;
+
+}
+
+
+
+/* .ButtonHandDiv {
+  position: absolute;
+} */
+
+.Menu-Circle {
+  position: relative;
+}
+
+.Menu-Hand {
+  position: absolute;
+  opacity: 1;
+  animation: fade 4s infinite;
+  top: 0px;
+  left: 0px;
+}
+
+.Menu-Button {
+  position: absolute;
+  top: 590px;
+  left: 535px;
+  height: 10%;
+  width: 15%;
+}
+.Menu-Button:hover {
+  opacity: .80;
+  transition: 0.3s;
+}
+
+@keyframes fade {
+  0% {opacity: 1}
+  50% { opacity: .1 }
+  100% { opacity: 1 }
+}

@@ -5,7 +5,7 @@ import './App.css';
 
 import hand from './Menu-Hand.gif';
 import circle from './Menu-Circle.png';
-import button from './Menu-Button.png';
+import button from './Menu-Button.gif';
 
 
 export default class Menu extends Component {

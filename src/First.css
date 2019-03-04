@@ -18,6 +18,14 @@
   left: 50px;
 }
 
+.First1GIF {
+  position: absolute;
+  width: 40%;
+  height: 6%;
+  top: 92px;
+  left: 47px;
+}
+
 .First1:hover {
   opacity: .5;
   transition: 0.3s;
@@ -25,13 +33,54 @@
 
 .First2 {
   position: absolute;
-  width: 50%;
-  height: 7%;
-  top: 150px;
-  left: 550px;
+  width: 40%;
+  height: 13%;
+  top: 100px;
+  left: 650px;
+}
+
+.First2GIF {
+  position: absolute;
+  width: 40%;
+  height: 14%;
+  top: 94px;
+  left: 650px;
 }
 
 .First2:hover {
   opacity: .5;
   transition: 0.3s;
+}
+
+.FirstSpace {
+  position: absolute;
+  width: 12%;
+  height: 7%;
+  top: 520px;
+  left: 310px;
+  opacity: 1;
+  animation: fade 1.5s infinite;
+}
+
+@keyframes fade {
+  0% {opacity: 1}
+  50% { opacity: .1 }
+  100% { opacity: 1 }
+}
+
+.FirstLoad {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+.FirstClock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }

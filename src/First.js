@@ -6,7 +6,12 @@ import houses from './First-Houses.png';
 import tree from './First-Tree.gif';
 import dog from './First-Dog.gif';
 import first1 from './First-1.png';
+import first1GIF from './First-1.gif';
+import first2GIF from './First-2.gif';
 import first2 from './First-2.png';
+import space from './First-Spacebar.png';
+import load from './First-Load.gif';
+import clock from './First-Clock.gif';
 
 
 
@@ -19,7 +24,14 @@ export default class First extends Component {
       showDog: false,
       showFirst1: true,
       showFirst2: false,
-      isActive: false,
+      isDogActive: false,
+      isText2Active: false,
+      textGIF1: false,
+      textGIF2: false,
+      showSpace: false,
+      load: false,
+      didSpace: false,
+      showAlarm: false,
     };
   }
 
@@ -31,14 +43,81 @@ export default class First extends Component {
   handleText1Click = (event) => {
     this.setState({
       showFirst1: false,
+      textGIF1: true,
     });
+
     setTimeout(() => {
       this.setState({
-        showFirst2: true,
+        textGIF1: false,
       });
     }, 1000);
+
+    setTimeout(() => {
+      this.setState({
+        isDogActive:true,
+        showDog: true,
+      });
+    }, 1000);
+
+    setTimeout(() => {
+      this.setState({
+        isText2Active: true,
+        showFirst2: true,
+      });
+    }, 3000);
     }
 
+    handleText2Click = (event) => {
+      this.setState({
+        showFirst2: false,
+        textGIF2: true,
+      });
+
+      setTimeout(() => {
+        this.setState({
+          textGIF2: false,
+          showSpace: true,
+        });
+      }, 1000);
+      }
+
+
+    componentWillMount() {
+       document.addEventListener("keydown", this.onKeyPressed.bind(this));
+       document.addEventListener("keyup", this.onKeyReleased.bind(this));
+   }
+
+   componentWillUnmount() {
+       document.removeEventListener("keydown", this.onKeyPressed.bind(this));
+        document.addEventListener("keyup", this.onKeyReleased.bind(this));
+   }
+
+
+   onKeyPressed(e) {
+     console.log(e.keyCode);
+     console.log("the key is pressed");
+     this.setState({
+       load: true,
+       showSpace: false,
+     });
+     setTimeout(() => {
+       this.setState({
+         load: false,
+         didSpace: true,
+         showAlarm: true,
+       });
+     }, 2800);
+   }
+
+   onKeyReleased(e) {
+     if (this.state.didSpace == false) {
+       console.log("the key is released");
+       this.setState({
+         load: false,
+         showSpace: true,
+       });
+     }
+   }
 
   render() {
     return (
@@ -47,16 +126,32 @@ export default class First extends Component {
         <img src={houses} className="First-Houses" alt="houses"/>
         <img src={tree} className="First-Tree" alt="tree"/>
       </div>
+
+
+      <div className = {this.state.showFirst1 ? 'fadeIn' : 'fadeOut'}>
+        <img src={first1} className="First1" alt="text1" onClick={this.handleText1Click.bind(this)}/>
+      </div>
+
+      {this.state.textGIF1 ? <img src={first1GIF} className="First1GIF"/> : null}
+      {this.state.textGIF2 ? <img src={first2GIF} className="First2GIF"/> : null}
+      {this.state.showSpace ? <img src={space} className="FirstSpace"/> : null}
+      {this.state.load ? <img src={load} className="FirstLoad"/> : null}
+      {this.state.showAlarm ? <img src={clock} className="FirstClock"/> : null}
+
+      <div tabIndex="0" onKeyDown={this.onKeyPressed} onKeyUp={this.onKeyReleased}>
+      </div>
+
+      {this.state.isDogActive ?
       <div className = {this.state.showDog ? 'fadeIn' : 'fadeOut'}>
         <img src={dog} className="First-Dog" alt="dog"/>
       </div>
+      : null}
 
-      <div className = {this.state.showFirst1 ? 'fadeIn' : 'fadeOut'}>
-        <img src={first1} className="First1" alt="text" onClick={this.handleText1Click.bind(this)}/>
-      </div>
+      {this.state.isText2Active ?
       <div className = {this.state.showFirst2 ? 'fadeIn' : 'fadeOut'}>
-        <img src={first2} className="First2" alt="text"/>
+        <img src={first2} className="First2" alt="text2"onClick={this.handleText2Click.bind(this)}/>
       </div>
+      : null}
       </div>
     );
   }

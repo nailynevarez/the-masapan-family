@@ -17,6 +17,7 @@ class App extends Component {
   }
 
 
+
   switchPage = (pageName) => {
     console.log(pageName);
     setTimeout(() => {

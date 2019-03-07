@@ -35,7 +35,7 @@ export default class Menu extends Component {
   render() {
     return (
       <div>
-        <div className = {this.state.showMenu ? 'fadeIn' : 'fadeOut'}>
+        <div className = {this.state.showMenu ? 'fadeIn' : 'fadeOutCircle'}>
           <img src={circle} className="Menu-Circle" alt="circle" />
         </div>
         <div className = {this.state.showButtonHand ? 'fadeIn' : 'fadeOut'}>

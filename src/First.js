@@ -12,14 +12,18 @@ import first2 from './First-2.png';
 import space from './First-Spacebar.png';
 import load from './First-Load.gif';
 import clock from './First-Clock.gif';
+import crackle from './crackle.mp3';
+import alarm from './alarm.mp3';
+import loadPic from './First-Load.png';
 
 
-
+let loadingTimeout;
 
 export default class First extends Component {
   constructor(props){
     super(props);
     this.state = {
+      isPageActive: true,
       showFirst: true,
       showDog: false,
       showFirst1: true,
@@ -30,10 +34,21 @@ export default class First extends Component {
       textGIF2: false,
       showSpace: false,
       load: false,
+      loadPic: false,
       didSpace: false,
       showAlarm: false,
     };
   }
+
+  componentDidMount() {
+      window.addEventListener('load', this.audioSettings);
+   }
+
+   audioSettings = () => {
+     let audioCrackle=document.getElementById("audioCrackle");
+     audioCrackle.volume=0.01;
+   }
+
 
   handleButtonClick = (event) => {
     let pageName = "second";
@@ -41,6 +56,7 @@ export default class First extends Component {
     }
 
   handleText1Click = (event) => {
+
     this.setState({
       showFirst1: false,
       textGIF1: true,
@@ -82,15 +98,16 @@ export default class First extends Component {
       }
 
 
-    componentWillMount() {
-       document.addEventListener("keydown", this.onKeyPressed.bind(this));
-       document.addEventListener("keyup", this.onKeyReleased.bind(this));
+  componentWillMount() {
+      document.addEventListener("keydown", this.onKeyPressed.bind(this));
+      document.addEventListener("keyup", this.onKeyReleased.bind(this));
    }
 
    componentWillUnmount() {
-       document.removeEventListener("keydown", this.onKeyPressed.bind(this));
-        document.addEventListener("keyup", this.onKeyReleased.bind(this));
+      document.removeEventListener("keydown", this.onKeyPressed.bind(this));
+      document.addEventListener("keyup", this.onKeyReleased.bind(this));
    }
+
 
 
    onKeyPressed(e) {
@@ -100,16 +117,19 @@ export default class First extends Component {
        load: true,
        showSpace: false,
      });
-     setTimeout(() => {
+
+     loadingTimeout = setTimeout(() => {
        this.setState({
          load: false,
+         loadPic: true,
          didSpace: true,
          showAlarm: true,
        });
-     }, 2800);
+     }, 2950);
    }
 
    onKeyReleased(e) {
+     clearTimeout(loadingTimeout);
      if (this.state.didSpace == false) {
        console.log("the key is released");
        this.setState({
@@ -119,9 +139,28 @@ export default class First extends Component {
      }
    }
 
+
+   handleSwitchScene = (event) => {
+     setTimeout(() => {
+       this.setState({
+         isPageActive: false,
+       });
+     }, 2000);
+
+     setTimeout(() => {
+       let pageName = "second";
+       this.props.switchPageFunction(pageName);
+     }, 500);
+     }
+
   render() {
     return (
-      <div>
+      <div className = {this.state.isPageActive ? 'fadeIn' : 'fadeOut'}>
+
+      {this.state.textGIF1 ? <audio id = "audioCrackle" src={crackle} controls autoPlay/> : null}
+      {this.state.textGIF2 ? <audio id = "audioCrackle" src={crackle} controls autoPlay/> : null}
+      {this.state.loadPic ? <audio id = "audioAlarm" src={alarm} controls autoPlay/> : null}
+
       <div className = {this.state.showFirst ? 'fadeIn' : 'fadeOut'}>
         <img src={houses} className="First-Houses" alt="houses"/>
         <img src={tree} className="First-Tree" alt="tree"/>
@@ -136,7 +175,8 @@ export default class First extends Component {
       {this.state.textGIF2 ? <img src={first2GIF} className="First2GIF"/> : null}
       {this.state.showSpace ? <img src={space} className="FirstSpace"/> : null}
       {this.state.load ? <img src={load} className="FirstLoad"/> : null}
-      {this.state.showAlarm ? <img src={clock} className="FirstClock"/> : null}
+      {this.state.loadPic ? <img src={loadPic} className="FirstLoad"/> : null}
+      {this.state.showAlarm ? <div>{this.handleSwitchScene()}<img src={clock} className="FirstClock"/></div> : null}
 
       <div tabIndex="0" onKeyDown={this.onKeyPressed} onKeyUp={this.onKeyReleased}>
       </div>

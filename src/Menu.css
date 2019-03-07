@@ -15,6 +15,13 @@ img {
   position: relative;
 }
 
+.fadeOutCircle {
+  -webkit-animation: fadeOut 1s forwards;
+  -moz-animation: fadeOut 1s forwards;
+  -o-animation: fadeOut 1s forwards;
+  animation: fadeOut 1s forwards;
+}
+
 .Menu-Hand {
   position: absolute;
   opacity: 1;
@@ -25,14 +32,18 @@ img {
 
 .Menu-Button {
   position: absolute;
-  top: 590px;
-  left: 535px;
+  top: 85%;
+  left: 42.2%;
   height: 10%;
   width: 15%;
+  opacity: 1;
+  transition: 0.7s;
 }
 .Menu-Button:hover {
   opacity: .80;
   transition: 0.3s;
+  width: 17%;
+  left: 41%;
 }
 
 @keyframes fade {

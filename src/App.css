@@ -6,10 +6,15 @@
   cursor: url("Mouse2.cur"), auto;
 }
 
+audio {
+  display:none;
+}
+
 html {
   background:  url("Menu-Background.gif") no-repeat center center fixed;
   background-size: cover;
   overflow-y: hidden;
+  overflow-x: hidden;
 
 }
 

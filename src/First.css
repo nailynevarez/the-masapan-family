@@ -1,12 +1,12 @@
 .First-Tree {
   position: absolute;
-  top: 60px;
+  top: 10%;
   left: 0px;
 }
 
 .First-Dog {
   position: absolute;
-  top: 30px;
+  top: 5.5%;
   left: 0px;
 }
 
@@ -14,16 +14,19 @@
   position: absolute;
   width: 40%;
   height: 7%;
-  top: 90px;
-  left: 50px;
+  top: 13%;
+  left: 10%;
+  opacity: 1;
+  transition: 0.7s;
 }
 
 .First1GIF {
   position: absolute;
   width: 40%;
   height: 6%;
-  top: 92px;
-  left: 47px;
+  top: 13%;
+  left: 9.8%;
+  opacity: .5;
 }
 
 .First1:hover {
@@ -35,16 +38,19 @@
   position: absolute;
   width: 40%;
   height: 13%;
-  top: 100px;
-  left: 650px;
+  top: 15%;
+  left: 50%;
+  opacity: 1;
+  transition: 0.7s;
 }
 
 .First2GIF {
   position: absolute;
   width: 40%;
   height: 14%;
-  top: 94px;
-  left: 650px;
+  top: 14.5%;
+  left: 50%;
+  opacity: .5;
 }
 
 .First2:hover {
@@ -56,8 +62,8 @@
   position: absolute;
   width: 12%;
   height: 7%;
-  top: 520px;
-  left: 310px;
+  top: 75.5%;
+  left: 23.5%;
   opacity: 1;
   animation: fade 1.5s infinite;
 }
@@ -70,8 +76,8 @@
 
 .FirstLoad {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 4%;
+  left: -1%;
   height: 100%;
   width: 100%;
 }
@@ -83,4 +89,9 @@
   left: 0;
   height: 100%;
   width: 100%;
+
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  animation: fadeIn 1s;
 }

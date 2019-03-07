@@ -1,0 +1,154 @@
+.Second-Hallway {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Second-Legs {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+
+}
+
+.Second-Leg-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  animation: LegFade1 8s infinite;
+}
+
+@keyframes LegFade1 {
+  0% {opacity: 0}
+  30% {opacity: 1}
+  60% { opacity: 0 }
+  90% { opacity: 0 }
+  100% { opacity: 0 }
+}
+
+.Second-Leg-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  animation: LegFade2 8s infinite;
+}
+
+@keyframes LegFade2 {
+  0% {opacity: 0}
+  30% {opacity: 0}
+  60% { opacity: 1 }
+  90% { opacity: 0 }
+  100% { opacity: 0 }
+}
+
+.Second-Leg-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  animation: LegFade3 8s infinite;
+}
+
+@keyframes LegFade3 {
+  0% {opacity: 0}
+  30% {opacity: 0}
+  60% { opacity: 0 }
+  90% { opacity: 1 }
+  100% {opacity: 0}
+}
+
+.slider {
+  position: absolute;
+  top: 23.5%;
+  left: 75.95%;
+  -webkit-appearance: none;
+  width: 100px;
+  height: 10px;
+  background: #fdd1a3;
+  /* background: #4c3f31; */
+  outline: none;
+  opacity: 0.3;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 5px;
+}
+
+.slider:hover {
+  opacity: .9;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  /* background: #4c3f31; */
+  background: #f35722;
+  border-radius: 5px;
+}
+
+.slider::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  /* background: #4c3f31; */
+  background: #f35722;
+  border-radius: 5px;
+}
+
+
+.Second-Text-1 {
+  position: absolute;
+  height: 15%;
+  width: 35%;
+  top: 79%;
+  left: 54%;
+
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.Second-Text-1:hover {
+  opacity: .5;
+  transition: 0.3s;
+}
+
+.Second-Text-2 {
+  position: absolute;
+  height: 12%;
+  width: 33%;
+  top: 60%;
+  left: 65%;
+
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.Second-Text-2:hover {
+  opacity: .5;
+  transition: 0.3s;
+}
+
+.Second-Text-3 {
+  position: absolute;
+  height: 6%;
+  width: 25%;
+  top: 43%;
+  left: 73%;
+
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.Second-Text-3:hover {
+  opacity: .5;
+  transition: 0.3s;
+}
+
+.Doors {
+  position: absolute;
+  top:0;
+  left:0;
+
+}

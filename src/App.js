@@ -13,30 +13,10 @@ class App extends Component {
     super(props);
     this.myRef = React.createRef();
     this.state = {
-      activePage: 'second',
+      activePage: 'third',
     };
   }
 
-  // <Sound
-  // url={sound}
-  // playStatus={Sound.status.PLAYING}
-  // playFromPosition={300 /* in milliseconds */}
-  // onLoading={this.handleSongLoading}
-  // onPlaying={this.handleSongPlaying}
-  // onFinishedPlaying={this.handleReplay}
-  // />
-
-
-
-  // handleAudio = () => {
-  //   console.log("it clicked.");
-  //   let myAudio = new Audio('./song.mp3');
-  //   myAudio.addEventListener('ended', function() {
-  //   this.currentTime = 0;
-  //   this.play();
-  //   }, false);
-  //   myAudio.play();
-  // }
 
 
 

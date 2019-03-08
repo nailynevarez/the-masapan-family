@@ -60,93 +60,92 @@ export default class Second extends Component {
         sliderValue: event.target.value
       });
       console.log(this.state.sliderValue);
-      this.checkSliderValue()
+
+      if (this.state.sliderValue == 1) {
+        this.setState({
+          door1: true,
+          door2: false,
+        });
+      }
+
+      if (this.state.sliderValue == 2) {
+        this.setState({
+          door1: false,
+          door2: true,
+          door3: false,
+        });
+      }
+
+      if (this.state.sliderValue == 3) {
+        this.setState({
+          door2: false,
+          door3: true,
+          door4: false,
+        });
+      }
+
+      if (this.state.sliderValue == 4) {
+        this.setState({
+          door3: false,
+          door4: true,
+          door5: false,
+        });
+      }
+
+      if (this.state.sliderValue == 5) {
+        this.setState({
+          door4: false,
+          door5: true,
+          door6: false,
+        });
+      }
+
+      if (this.state.sliderValue == 6) {
+        this.setState({
+          door5: false,
+          door6: true,
+          door7: false,
+        });
+      }
+
+      if (this.state.sliderValue == 7) {
+        this.setState({
+          door6: false,
+          door7: true,
+          door8: false,
+        });
+      }
+
+      if (this.state.sliderValue == 8) {
+        this.setState({
+          door7: false,
+          door8: true,
+          door9: false,
+        });
+      }
+
+      if (this.state.sliderValue == 9) {
+        this.setState({
+          door8: false,
+          door9: true,
+          door10: false,
+        });
+      }
+
+      if (this.state.sliderValue == 10) {
+        this.setState({
+          door9: false,
+          door10: true,
+          isSliderActive: false
+        });
+        setTimeout(() => {
+          this.handleSwitchScene();
+        }, 2000);
+      }
+
   }
 
-  checkSliderValue = () => {
 
-    if (this.state.sliderValue == 2) {
-      this.setState({
-        door1: true,
-        door2: false,
-      });
-    }
-
-    if (this.state.sliderValue == 2) {
-      this.setState({
-        door1: false,
-        door2: true,
-        door3: false,
-      });
-    }
-
-    if (this.state.sliderValue == 3) {
-      this.setState({
-        door2: false,
-        door3: true,
-        door4: false,
-      });
-    }
-
-    if (this.state.sliderValue == 4) {
-      this.setState({
-        door3: false,
-        door4: true,
-        door5: false,
-      });
-    }
-
-    if (this.state.sliderValue == 5) {
-      this.setState({
-        door4: false,
-        door5: true,
-        door6: false,
-      });
-    }
-
-    if (this.state.sliderValue == 6) {
-      this.setState({
-        door5: false,
-        door6: true,
-        door7: false,
-      });
-    }
-
-    if (this.state.sliderValue == 7) {
-      this.setState({
-        door6: false,
-        door7: true,
-        door8: false,
-      });
-    }
-
-    if (this.state.sliderValue == 8) {
-      this.setState({
-        door7: false,
-        door8: true,
-        door9: false,
-      });
-    }
-
-    if (this.state.sliderValue == 9) {
-      this.setState({
-        door8: false,
-        door9: true,
-        door10: false,
-      });
-    }
-
-    if (this.state.sliderValue == 10) {
-      this.setState({
-        door9: false,
-        door10: true,
-        isSliderActive: false
-      });
-      setTimeout(() => {
-        this.handleSwitchScene();
-      }, 1000);
-    }
-  }
 
   handleText1Click = () => {
     this.setState({

@@ -23,7 +23,7 @@
   0% {opacity: 0}
   30% {opacity: 1}
   60% { opacity: 0 }
-  90% { opacity: 0 }
+  95% { opacity: 0 }
   100% { opacity: 0 }
 }
 
@@ -39,7 +39,7 @@
   0% {opacity: 0}
   30% {opacity: 0}
   60% { opacity: 1 }
-  90% { opacity: 0 }
+  95% { opacity: 0 }
   100% { opacity: 0 }
 }
 
@@ -52,11 +52,11 @@
 }
 
 @keyframes LegFade3 {
-  0% {opacity: 0}
+  0% {opacity: .4}
   30% {opacity: 0}
   60% { opacity: 0 }
-  90% { opacity: 1 }
-  100% {opacity: 0}
+  95% { opacity: 1 }
+  100% {opacity: .7}
 }
 
 .slider {
@@ -100,7 +100,7 @@
 
 .Second-Text-1 {
   position: absolute;
-  height: 15%;
+  height: 14%;
   width: 35%;
   top: 79%;
   left: 54%;
@@ -116,7 +116,7 @@
 
 .Second-Text-2 {
   position: absolute;
-  height: 12%;
+  height: 11%;
   width: 33%;
   top: 60%;
   left: 65%;
@@ -132,7 +132,7 @@
 
 .Second-Text-3 {
   position: absolute;
-  height: 6%;
+  height: 5%;
   width: 25%;
   top: 43%;
   left: 73%;

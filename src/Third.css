@@ -1,0 +1,63 @@
+.Third-Background {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Third-BigBox {
+  position: absolute;
+  top: 75%;
+  left: 53%;
+  height: 15%;
+  width: 10%;
+}
+
+.Third-SmallBox {
+  position: absolute;
+  top: 87%;
+  left: 55%;
+  height: 5%;
+  width: 10%;
+}
+
+.Third-Flour1 {
+  position: absolute;
+  top: 78%;
+  left: 33%;
+  height: 13%;
+  width: 15%;
+}
+
+.Third-Flour2 {
+  position: absolute;
+  top: 75%;
+  left: 40%;
+  height: 19%;
+  width: 7%;
+}
+
+.Third-Carton1 {
+  position: absolute;
+  top: 82%;
+  left: 45%;
+  height: 12%;
+  width: 11%;
+
+}
+
+.Third-Carton2 {
+  position: absolute;
+  top: 82%;
+  left: 49%;
+  height: 13%;
+  width: 11%;
+
+}
+
+.Third-Peanuts {
+  position: absolute;
+  top: 76%;
+  left: 45%;
+  height: 13%;
+  width: 11%;
+}

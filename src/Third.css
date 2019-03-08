@@ -61,3 +61,140 @@
   height: 13%;
   width: 11%;
 }
+
+.Third-Text1 {
+  position: absolute;
+  top: 10%;
+  left: 4%;
+  height: 6.5%;
+  width: 4%;
+
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.Third-Text1:hover {
+opacity: .5;
+transition: 0.3s;
+}
+
+.Third-Text2 {
+  position: absolute;
+  top: 17%;
+  left: 4%;
+  height: 6.5%;
+  width: 15%;
+
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.Third-Text2:hover {
+opacity: .5;
+transition: 0.3s;
+}
+
+.Third-Text3 {
+  position: absolute;
+  top: 24%;
+  left: 4%;
+  height: 6.5%;
+  width: 15%;
+
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.Third-Text3:hover {
+opacity: .5;
+transition: 0.3s;
+}
+
+.Third-Text4 {
+  position: absolute;
+  top: 38.9%;
+  left: 4%;
+  height: 9%;
+  width: 26%;
+
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.Third-Text4:hover {
+opacity: .5;
+transition: 0.3s;
+}
+
+.Third-Arrow1 {
+  position: absolute;
+  height: 10%;
+  width: 5%;
+  top: 3%;
+  left: 37%;
+}
+
+.Third-Arrow2 {
+  position: absolute;
+  height: 10%;
+  width: 5%;
+  top: 8%;
+  left: 33.5%;
+  transform: rotate(35deg);
+}
+
+.Third-Arrow3 {
+  position: absolute;
+  height: 10%;
+  width: 5%;
+  top: 4%;
+  left: 60.5%;
+  transform: rotate(90deg);
+}
+
+.Third-Arrow4 {
+  position: absolute;
+  height: 10%;
+  width: 5%;
+  top: 8.5%;
+  left: 64.5%;
+  transform: rotate(60deg);
+}
+
+.Third-Arrow5 {
+  position: absolute;
+  height: 10%;
+  width: 5%;
+  top: 75%;
+  left: 92%;
+  transform: rotate(120deg);
+}
+
+.Third-Arrow6 {
+  position: absolute;
+  height: 10%;
+  width: 5%;
+  top: 18%;
+  left: 82%;
+  transform: rotate(80deg);
+}
+
+.Third-Arrow7 {
+  position: absolute;
+  height: 10%;
+  width: 5%;
+  top: 2%;
+  left: 42.5%;
+  transform: rotate(-40deg);
+}
+
+.Third-Crackle {
+  position: absolute;
+  top: 7%;
+  left: 2.9%;
+  height: 43%;
+  width: 28%;
+
+  opacity: 1;
+  transition: 0.7s;
+}

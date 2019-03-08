@@ -4,8 +4,9 @@ import Menu from './Menu.js';
 import First from './First.js';
 import Second from './Second.js';
 import Third from './Third.js';
+import Fourth from './Fourth.js';
 import Sound from 'react-sound';
-import sound from './song.mp3';
+import sound from './song.mov';
 import './App.css';
 
 class App extends Component {
@@ -53,6 +54,9 @@ componentDidMount() {
           break;
         case 'third':
           component = <Third switchPageFunction = {this.switchPage}/>;
+          break;
+        case 'fourth':
+          component = <Fourth switchPageFunction = {this.switchPage}/>;
           break;
       }
     return (

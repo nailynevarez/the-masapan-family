@@ -65,14 +65,10 @@
   top: 75.5%;
   left: 23.5%;
   opacity: 1;
-  animation: fade 1.5s infinite;
+  animation: fade 2s infinite;
 }
 
-@keyframes fade {
-  0% {opacity: 1}
-  50% { opacity: .1 }
-  100% { opacity: 1 }
-}
+
 
 .FirstLoad {
   position: absolute;

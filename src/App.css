@@ -15,7 +15,6 @@ html {
   background-size: cover;
   overflow-y: hidden;
   overflow-x: hidden;
-
 }
 
 .fadeIn {
@@ -71,3 +70,10 @@ html {
     opacity: 1; }
   to {
     opacity: 0; } }
+
+
+@keyframes fade {
+  0% {opacity: 1}
+  50% { opacity: .1 }
+  100% { opacity: 1 }
+}

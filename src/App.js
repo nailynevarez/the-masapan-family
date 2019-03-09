@@ -5,6 +5,7 @@ import First from './First.js';
 import Second from './Second.js';
 import Third from './Third.js';
 import Fourth from './Fourth.js';
+import Fifth from './Fifth.js';
 import Sound from 'react-sound';
 import sound from './song.mov';
 import './App.css';
@@ -14,7 +15,7 @@ class App extends Component {
     super(props);
     this.myRef = React.createRef();
     this.state = {
-      activePage: 'third',
+      activePage: 'fourth',
     };
   }
 
@@ -57,6 +58,9 @@ componentDidMount() {
           break;
         case 'fourth':
           component = <Fourth switchPageFunction = {this.switchPage}/>;
+          break;
+        case 'fifth':
+          component = <Fifth switchPageFunction = {this.switchPage}/>;
           break;
       }
     return (

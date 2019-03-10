@@ -1,0 +1,164 @@
+.Fifth-Background {
+  position: absolute;
+  height: 103.5%;
+  width: 103.5%;
+  top: -3%;
+  left: -1.9%;
+}
+
+.Fifth-Making {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+}
+
+.Fifth-Text1 {
+  position: absolute;
+  height: 7.2%;
+  width: 23.8%;
+  top: 7.7%;
+  left: 9%;
+
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.Fifth-Text1:hover {
+  opacity: .5;
+  transition: 0.3s;
+}
+
+.Fifth-Text2 {
+  position: absolute;
+  height: 7.2%;
+  width: 23.8%;
+  top: 7.9%;
+  left: 35%;
+
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.Fifth-Text2:hover {
+  opacity: .5;
+  transition: 0.3s;
+}
+
+.Fifth-Text3 {
+  position: absolute;
+  height: 7.2%;
+  width: 29.3%;
+  top: 7.5%;
+  left: 61.7%;
+
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.Fifth-Text3:hover {
+  opacity: .5;
+  transition: 0.3s;
+}
+
+.Fifth-Text4 {
+  position: absolute;
+  height: 10.9%;
+  width: 45.3%;
+  top: 24.9%;
+  left: 26%;
+
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.Fifth-Text4:hover {
+  opacity: .5;
+  transition: 0.3s;
+}
+
+.Fifth-Text5 {
+  position: absolute;
+  width: 12%;
+  height: 7%;
+  top: 87.5%;
+  left: 43.5%;
+  opacity: 1;
+  animation: fade 2s infinite;
+}
+
+
+.Fifth-TextCrackle {
+  position: absolute;
+  height: 30%;
+  width: 89%;
+  top: 6.3%;
+  left: 5.5%;
+
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.Fifth-1 {
+  position: absolute;
+  height: 6%;
+  width: 13%;
+  top: 86%;
+  left: 83%;
+}
+
+.Fifth-2 {
+  position: absolute;
+  height: 6%;
+  width: 13%;
+  top: 86%;
+  left: 83%;
+}
+
+.Fifth-3 {
+  position: absolute;
+  height: 6%;
+  width: 13%;
+  top: 86%;
+  left: 83%;
+}
+
+.Fifth-4 {
+  position: absolute;
+  height: 6%;
+  width: 13%;
+  top: 86%;
+  left: 83%;
+}
+
+.Fifth-5 {
+  position: absolute;
+  height: 6%;
+  width: 13%;
+  top: 86%;
+  left: 83%;
+}
+
+.Fifth-6 {
+  position: absolute;
+  height: 6%;
+  width: 13%;
+  top: 86%;
+  left: 83%;
+}
+
+.Fifth-7 {
+  position: absolute;
+  height: 6%;
+  width: 13%;
+  top: 86%;
+  left: 83%;
+}
+
+.Fifth-8 {
+  position: absolute;
+  height: 6%;
+  width: 13%;
+  top: 86%;
+  left: 83%;
+}

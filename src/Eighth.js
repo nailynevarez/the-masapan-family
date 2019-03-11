@@ -14,6 +14,7 @@ import tree from './First-Tree.gif';
 import light from './Eighth-BackgroundLight.gif';
 import alarm from './alarm.mp3';
 import clock from './First-Clock.gif';
+import treeStill from './Eighth-Tree.png';
 
 
 class Eighth extends Component {
@@ -28,6 +29,7 @@ class Eighth extends Component {
       text3Active: false,
       showLight: false,
       showAlarm: false,
+      showText3: false,
     };
   }
 
@@ -78,26 +80,50 @@ handleText2Click = () => {
   this.setState({
     text2Active: false,
     text3Active: true,
+    showText3: true,
   });
 }
 
 handleText3Click = () => {
   this.setState({
     showLight: true,
-    isNight: false,
   });
+
+  setTimeout(() => {
+    this.setState({
+    isNight: false,
+    });
+  }, 500);
+
 
   setTimeout(() => {
     this.setState({
       showLight: false,
     });
   }, 1500);
+
+  setTimeout(() => {
+    this.setState({
+      showAlarm: true,
+    });
+  }, 1500);
+  setTimeout(() => {
+    this.setState({
+      soundAlarm: true,
+    });
+  }, 3000);
+
   setTimeout(() => {
     this.setState({
       text3Active: false,
-      showAlarm: true,
     });
-  }, 1000);
+  }, 4000);
+
+  setTimeout(() => {
+    this.setState({
+      showText3: false,
+    });
+  }, 4500);
 }
 
 handleSwitchScene = (event) => {
@@ -105,12 +131,12 @@ handleSwitchScene = (event) => {
     this.setState({
       isPageActive: false,
     });
-  }, 2000);
+  }, 4000);
 
   setTimeout(() => {
     let pageName = "ninth";
     this.props.switchPageFunction(pageName);
-  }, 500);
+  }, 4000);
   }
 
 
@@ -121,20 +147,23 @@ handleSwitchScene = (event) => {
       <div className = {this.state.isPageActive ? 'fadeIn' : 'fadeOut'}>
 
         <img src={houses} className="Eighth-Houses"/>
-
+        <img src={tree} className="Eighth-Tree"/>
         {this.state.isDark ?
           <img src={background} className="Eighth-Background"/>
           : null}
 
-        {this.state.showLight ?
-          <img src={light} className="Eighth-BackgroundLight"/>
-          : null}
+
 
         {this.state.isNight ?
           <img src={backgroundStill} className="Eighth-BackgroundStill"/>
           : null}
+
+          {this.state.showLight ?
+            <img src={light} className="Eighth-BackgroundLight"/>
+            : null}
+
           <img src={trash} className="Eighth-Trash"/>
-          <img src={tree} className="Eighth-Tree"/>
+
 
         {this.state.isNight ?
             <img src={backgroundStill} className="Eighth-BackgroundStill"/>
@@ -152,14 +181,15 @@ handleSwitchScene = (event) => {
           </div>
         : null}
 
-        {this.state.text3Active ?
+        {this.state.showText3 ?
           <div className = {this.state.text3Active ? 'fadeIn' : 'fadeOut'}>
             <img src={text3} className="Eighth-Text3" onClick = {this.handleText3Click.bind(this)}/>
           </div>
         : null}
 
-          {this.state.showAlarm ? <audio id = "audioAlarm" src={alarm} controls autoPlay/> : null}
+          {this.state.soundAlarm ? <audio id = "audioAlarm" src={alarm} controls autoPlay/> : null}
           {this.state.showAlarm ? <div>{this.handleSwitchScene()}<img src={clock} className="Eighth-Clock"/></div> : null}
+
       </div>
     );
   }

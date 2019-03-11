@@ -79,13 +79,18 @@ class Sixth extends Component {
 
   handleText4Click = () => {
     this.setState({
-      text4: false,
       pic4: false,
       pic5: true,
       isPaletero: false,
       isKids: true,
       isCrackle: true,
     });
+
+    setTimeout(() => {
+      this.setState({
+        text4: false,
+      });
+    }, 50);
 
     setTimeout(() => {
       this.setState({

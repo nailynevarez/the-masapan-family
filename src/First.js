@@ -45,8 +45,10 @@ export default class First extends Component {
    }
 
    audioSettings = () => {
+     if (this.state.textGIF1 == true ) {
      let audioCrackle=document.getElementById("audioCrackle");
      audioCrackle.volume=0.01;
+   }
    }
 
 
@@ -58,9 +60,15 @@ export default class First extends Component {
   handleText1Click = (event) => {
 
     this.setState({
-      showFirst1: false,
+
       textGIF1: true,
     });
+
+    setTimeout(() => {
+      this.setState({
+        showFirst1: false,
+      });
+    }, 50);
 
     setTimeout(() => {
       this.setState({
@@ -85,9 +93,15 @@ export default class First extends Component {
 
     handleText2Click = (event) => {
       this.setState({
-        showFirst2: false,
+        
         textGIF2: true,
       });
+
+      setTimeout(() => {
+        this.setState({
+          showFirst2: false,
+        });
+      }, 50);
 
       setTimeout(() => {
         this.setState({

@@ -21,7 +21,7 @@ class Ninth extends Component {
      setTimeout(() => {
        let pageName = "menu";
        this.props.switchPageFunction(pageName);
-     }, 500);
+     }, 5000);
      }
 
 

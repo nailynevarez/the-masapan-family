@@ -19,7 +19,7 @@ class App extends Component {
     super(props);
     this.myRef = React.createRef();
     this.state = {
-      activePage: 'menu',
+      activePage: 'eighth',
     };
   }
 
@@ -32,7 +32,7 @@ componentDidMount() {
 
  audioSettings = () => {
    let backgroundAudio=document.getElementById("myaudio");
-   backgroundAudio.volume=0.06;
+   backgroundAudio.volume=0.03;
    document.getElementById("myaudio").loop = true;
  }
 

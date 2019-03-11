@@ -46,6 +46,7 @@ class Seventh extends Component {
       text3Active: false,
       text4Active: false,
       textCrackle: false,
+      canPress: false,
     };
   }
 
@@ -60,10 +61,12 @@ class Seventh extends Component {
    }
 
    onKeyPressed = () => {
+     if(this.state.canPress == true) {
      this.setState({
        isMaking: true,
        isHandsStill: false,
        pressText: false,
+
      });
 
      setTimeout(() => {
@@ -71,12 +74,15 @@ class Seventh extends Component {
          isMaking: false,
          isHandsStill: true,
          pressText: true,
+
        });
      }, 3500);
    }
+ }
 
 
    onKeyReleased = (e) => {
+     if(this.state.canPress == true) {
      let counter = this.state.counter + 1;
      this.setState({
        counter: counter,
@@ -134,9 +140,11 @@ class Seventh extends Component {
        this.setState({
          pic15: false,
          pic16: true,
+         pressText: false,
        });
      }
    }
+ }
 
 
    handleSwitchScene = (event) => {
@@ -149,7 +157,7 @@ class Seventh extends Component {
      setTimeout(() => {
        let pageName = "eighth";
        this.props.switchPageFunction(pageName);
-     }, 500);
+     }, 1000);
      }
 
 
@@ -178,16 +186,19 @@ class Seventh extends Component {
      handleText4Click = () => {
        this.setState({
          textCrackle: true,
-         text1Active: false,
-         text2Active: false,
-         text3Active: false,
-         text4Active: false,
        });
+
+       setTimeout(() => {
+         this.setState({
+           text4Active: false,
+         });
+       }, 50);
 
        setTimeout(() => {
          this.setState({
            textCrackle: false,
            pressText: true,
+           canPress: true,
          });
        }, 1000);
      }

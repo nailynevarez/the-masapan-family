@@ -151,7 +151,7 @@ class Fourth extends Component {
       setTimeout(() => {
         let pageName = "fifth";
         this.props.switchPageFunction(pageName);
-      }, 2000);
+      }, 500);
       this.setState({
         isPageActive: false,
       });
@@ -160,8 +160,14 @@ class Fourth extends Component {
       textClick = () => {
         this.setState({
           showCrackle: true,
-          showText: false,
+
         });
+
+        setTimeout(() => {
+          this.setState({
+            showText: false,
+          });
+        }, 50);
 
         setTimeout(() => {
           this.setState({

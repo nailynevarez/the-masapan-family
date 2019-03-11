@@ -64,83 +64,148 @@ export default class Second extends Component {
       if (this.state.sliderValue == 1) {
         this.setState({
           door1: true,
-          door2: false,
+
         });
+        setTimeout(() => {
+          this.setState({
+            door2: false,
+          });
+        }, 50);
       }
 
       if (this.state.sliderValue == 2) {
         this.setState({
-          door1: false,
+
           door2: true,
-          door3: false,
+
         });
+
+        setTimeout(() => {
+          this.setState({
+            door1: false,
+            door3: false,
+          });
+        }, 50);
       }
 
       if (this.state.sliderValue == 3) {
         this.setState({
-          door2: false,
+
           door3: true,
-          door4: false,
+
         });
+
+        setTimeout(() => {
+          this.setState({
+            door2: false,
+            door4: false,
+          });
+        }, 50);
       }
 
       if (this.state.sliderValue == 4) {
         this.setState({
-          door3: false,
           door4: true,
-          door5: false,
         });
+
+        setTimeout(() => {
+          this.setState({
+            door3: false,
+            door5: false,
+          });
+        }, 50);
       }
 
       if (this.state.sliderValue == 5) {
         this.setState({
-          door4: false,
+
           door5: true,
-          door6: false,
+
         });
+        setTimeout(() => {
+          this.setState({
+            door4: false,
+            door6: false,
+          });
+        }, 50);
+
       }
 
       if (this.state.sliderValue == 6) {
         this.setState({
-          door5: false,
+
           door6: true,
-          door7: false,
+
         });
+
+        setTimeout(() => {
+          this.setState({
+            door5: false,
+            door7: false,
+          });
+        }, 50);
       }
 
       if (this.state.sliderValue == 7) {
         this.setState({
-          door6: false,
+
           door7: true,
-          door8: false,
+
         });
+
+        setTimeout(() => {
+          this.setState({
+            door6: false,
+            door8: false,
+          });
+        }, 50);
       }
 
       if (this.state.sliderValue == 8) {
         this.setState({
-          door7: false,
+
           door8: true,
-          door9: false,
+
         });
+
+        setTimeout(() => {
+          this.setState({
+            door7: false,
+            door9: false,
+          });
+        }, 50);
       }
 
       if (this.state.sliderValue == 9) {
         this.setState({
-          door8: false,
+
           door9: true,
-          door10: false,
+
         });
+
+        setTimeout(() => {
+          this.setState({
+            door8: false,
+            door10: false,
+            isSliderActive: false,
+          });
+        }, 50);
+        setTimeout(() => {
+          this.handleSwitchScene();
+        }, 2000);
       }
 
       if (this.state.sliderValue == 10) {
         this.setState({
-          door9: false,
           door10: true,
-          isSliderActive: false
         });
         setTimeout(() => {
-          this.handleSwitchScene();
-        }, 2000);
+          this.setState({
+            door9: false,
+
+          });
+        }, 50);
+
       }
 
   }
@@ -173,7 +238,7 @@ export default class Second extends Component {
     return (
       <div className = {this.state.isPageActive ? 'fadeIn' : 'fadeOut'}>
         <img src={hallway} className="Second-Hallway" alt="hallway"/>
-
+        {this.state.door10 ? <img src={door1} className="Doors"/> : null}
         {this.state.door1 ? <img src={door1} className="Doors"/> : null}
         {this.state.door2 ? <img src={door2} className="Doors"/> : null}
         {this.state.door3 ? <img src={door3} className="Doors"/> : null}
@@ -183,7 +248,7 @@ export default class Second extends Component {
         {this.state.door7 ? <img src={door7} className="Doors"/> : null}
         {this.state.door8 ? <img src={door8} className="Doors"/> : null}
         {this.state.door9 ? <img src={door9} className="Doors"/> : null}
-        {this.state.door10 ? <img src={door1} className="Doors"/> : null}
+
 
 
         <img src={leg1} className="Second-Leg-1" alt="leg1"/>
@@ -207,7 +272,7 @@ export default class Second extends Component {
         : null}
 
         <div className = {this.state.isSliderActive ? 'fadeIn' : 'fadeOut'}>
-        {this.state.isSliderActive ? <input type="range" min="1" max="11" value={this.state.sliderValue} className="slider" id="myRange" onChange = {this.changeSliderValue.bind(this)}/> : null}
+        {this.state.isSliderActive ? <input type="range" min="1" max="10" value={this.state.sliderValue} className="slider" id="myRange" onChange = {this.changeSliderValue.bind(this)}/> : null}
         </div>
 
 

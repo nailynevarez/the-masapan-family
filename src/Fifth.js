@@ -41,6 +41,7 @@ class Fifth extends Component {
       pic6: false,
       pic7: false,
       pic8: false,
+      canPress: false,
     };
   }
 
@@ -55,6 +56,7 @@ class Fifth extends Component {
    }
 
   onKeyPressed = () => {
+    if (this.state.canPress == true) {
     this.setState({
       isMaking: true,
       isHandsStill: false,
@@ -69,8 +71,10 @@ class Fifth extends Component {
       });
     }, 3500);
   }
+  }
 
   onKeyReleased = (e) => {
+    if (this.state.canPress == true ) {
     let counter = this.state.counter + 1;
     this.setState({
       counter: counter,
@@ -131,6 +135,7 @@ class Fifth extends Component {
       });
     }
   }
+}
 
   handleSwitchScene = (event) => {
     setTimeout(() => {
@@ -167,16 +172,22 @@ class Fifth extends Component {
   handleText4Click = () => {
     this.setState({
       textCrackle: true,
-      text1Active: false,
-      text2Active: false,
-      text3Active: false,
-      text4Active: false,
     });
+
+    setTimeout(() => {
+      this.setState({
+        text1Active: false,
+        text2Active: false,
+        text3Active: false,
+        text4Active: false,
+      });
+    }, 50);
 
     setTimeout(() => {
       this.setState({
         textCrackle: false,
         text5Active: true,
+        canPress: true,
       });
     }, 1000);
   }
@@ -225,7 +236,7 @@ class Fifth extends Component {
         : null}
 
         {this.state.textCrackle ?
-            <img src={textCrackle} className="Fifth-TextCrackle" onClick = {this.handleText4Click.bind(this)}/>
+            <img src={textCrackle} className="Fifth-TextCrackle"/>
         : null}
 
         {this.state.pic1 ?

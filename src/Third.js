@@ -325,12 +325,18 @@ export default class Third extends Component {
 
   handleText4Click = () => {
     this.setState({
-      isText1Active: false,
-      isText2Active: false,
-      isText3Active: false,
-      isText4Active: false,
+
       isCrackle: true,
     });
+
+    setTimeout(() => {
+      this.setState({
+        isText1Active: false,
+        isText2Active: false,
+        isText3Active: false,
+        isText4Active: false,
+      });
+    }, 50);
 
     setTimeout(() => {
       this.setState({

@@ -6,6 +6,10 @@ import Second from './Second.js';
 import Third from './Third.js';
 import Fourth from './Fourth.js';
 import Fifth from './Fifth.js';
+import Sixth from './Sixth.js';
+import Seventh from './Seventh.js';
+import Eighth from './Eighth.js';
+import Ninth from './Ninth.js';
 import Sound from 'react-sound';
 import sound from './song.mov';
 import './App.css';
@@ -15,7 +19,7 @@ class App extends Component {
     super(props);
     this.myRef = React.createRef();
     this.state = {
-      activePage: 'fifth',
+      activePage: 'seventh',
     };
   }
 
@@ -61,6 +65,18 @@ componentDidMount() {
           break;
         case 'fifth':
           component = <Fifth switchPageFunction = {this.switchPage}/>;
+          break;
+        case 'sixth':
+          component = <Sixth switchPageFunction = {this.switchPage}/>;
+          break;
+        case 'seventh':
+          component = <Seventh switchPageFunction = {this.switchPage}/>;
+          break;
+        case 'eighth':
+          component = <Eighth switchPageFunction = {this.switchPage}/>;
+          break;
+        case 'ninth':
+          component = <Ninth switchPageFunction = {this.switchPage}/>;
           break;
       }
     return (

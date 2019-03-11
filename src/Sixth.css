@@ -1,0 +1,185 @@
+.Sixth-Background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.Sixth-Mom {
+  position: absolute;
+  top: 11%;
+  left: -10.5%;
+
+  height: 100%;
+  width: 100%;
+}
+
+.Sixth-Bike {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  top: 0;
+  left: 0;
+}
+
+.Sixth-Boys {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  top: 0;
+  left: 0;
+}
+
+.Sixth-Kids {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  top: 0;
+  left: 0;
+}
+
+.Sixth-Paletero {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  top: 0;
+  left: 0;
+}
+
+.Sixth-Chicken {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  top: 0;
+  left: 0;
+}
+
+
+.Sixth-1 {
+  position: absolute;
+  height: 5%;
+  width: 15%;
+  transform: rotate(18deg);
+
+  top:72%;
+  left: 52%;
+}
+
+.Sixth-2 {
+  position: absolute;
+  height: 5%;
+  width: 15%;
+  transform: rotate(18deg);
+
+  top:72%;
+  left: 52%;
+}
+
+.Sixth-3 {
+  position: absolute;
+  height: 5%;
+  width: 15%;
+  transform: rotate(18deg);
+
+  top:72%;
+  left: 52%;
+}
+
+.Sixth-4 {
+  position: absolute;
+  height: 5%;
+  width: 15%;
+  transform: rotate(18deg);
+
+  top:72%;
+  left: 52%;
+}
+
+.Sixth-5 {
+  position: absolute;
+  height: 5%;
+  width: 15%;
+  transform: rotate(18deg);
+
+  top:72%;
+  left: 52%;
+}
+
+
+.Sixth-Text1 {
+  position: absolute;
+  height: 6%;
+  width: 25%;
+  top: 22%;
+  left: 7%;
+  opacity: 1;
+  transition: 0.7s;
+  }
+
+  .Sixth-Text1:hover {
+  opacity: .5;
+  transition: 0.3s;
+  }
+
+
+  .Sixth-Text2 {
+    position: absolute;
+    height: 6%;
+    width: 25%;
+    top: 22%;
+    left: 7%;
+    opacity: 1;
+    transition: 0.7s;
+    }
+
+    .Sixth-Text2:hover {
+    opacity: .5;
+    transition: 0.3s;
+    }
+
+
+    .Sixth-Text3 {
+      position: absolute;
+      height: 6%;
+      width: 25%;
+      top: 22%;
+      left: 7%;
+      opacity: 1;
+      transition: 0.7s;
+      }
+
+      .Sixth-Text3:hover {
+      opacity: .5;
+      transition: 0.3s;
+      }
+
+      .Sixth-Text4 {
+        position: absolute;
+        height: 6%;
+        width: 9%;
+        top: 22%;
+        left: 14%;
+        opacity: 1;
+        transition: 0.7s;
+        }
+
+        .Sixth-Text4:hover {
+        opacity: .5;
+        transition: 0.3s;
+        }
+
+        .Sixth-Crackle {
+          position: absolute;
+          height: 8%;
+          width: 20%;
+          top: 20.9%;
+          left: 8.6%;
+          opacity: 1;
+          transition: 0.7s;
+          }

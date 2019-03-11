@@ -1,0 +1,83 @@
+.Eighth-Background {
+  position: absolute;
+  height: 105%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.Eighth-Houses {
+  position: absolute;
+  height: 105%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.Eighth-BackgroundStill {
+  position: absolute;
+  height: 105%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.Eighth-Trash {
+  position: absolute;
+  top: 5%;
+  left: 0;
+}
+
+.Eighth-Text1 {
+  position: absolute;
+  height: 7%;
+  width: 36%;
+  top: 12%;
+  left: 9%;
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.Eighth-Text1:hover {
+  opacity: .5;
+  transition: 0.3s;
+}
+
+
+.Eighth-Text2 {
+  position: absolute;
+  height: 7%;
+  width: 50%;
+  top: 14%;
+  left: 25%;
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.Eighth-Text2:hover {
+  opacity: .5;
+  transition: 0.3s;
+}
+
+
+.Eighth-Text3 {
+  position: absolute;
+  height: 7%;
+  width: 50%;
+  top: 18%;
+  left: 42%;
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.Eighth-Text3:hover {
+  opacity: .5;
+  transition: 0.3s;
+}
+
+.Eighth-Clock {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}

@@ -14,6 +14,12 @@ import pic14 from './Seventh-14.png';
 import pic15 from './Seventh-15.png';
 import pic16 from './Seventh-16.png';
 import pressText from './Fifth-Text5.png';
+import text1 from "./Seventh-Text1.png";
+import text2 from "./Seventh-Text2.png";
+import text3 from "./Seventh-Text3.png";
+import text4 from "./Seventh-Text4.png";
+import crackle from "./Seventh-Crackle.gif";
+
 
 
 class Seventh extends Component {
@@ -35,6 +41,11 @@ class Seventh extends Component {
       pic15: false,
       pic16: false,
       pressText: false,
+      text1Active: true,
+      text2Active: false,
+      text3Active: false,
+      text4Active: false,
+      textCrackle: false,
     };
   }
 
@@ -142,8 +153,48 @@ class Seventh extends Component {
      }
 
 
+     handleText1Click = () => {
+       console.log('hey');
+       this.setState({
+         text1Active: false,
+         text2Active: true,
+       });
+     }
+
+     handleText2Click = () => {
+       this.setState({
+         text2Active: false,
+         text3Active: true,
+       });
+     }
+
+     handleText3Click = () => {
+       this.setState({
+         text3Active: false,
+         text4Active: true,
+       });
+     }
+
+     handleText4Click = () => {
+       this.setState({
+         textCrackle: true,
+         text1Active: false,
+         text2Active: false,
+         text3Active: false,
+         text4Active: false,
+       });
+
+       setTimeout(() => {
+         this.setState({
+           textCrackle: false,
+           pressText: true,
+         });
+       }, 1000);
+     }
+
+
   render() {
-    let component = null;
+
     return (
       <div className = {this.state.isPageActive ? 'fadeIn' : 'fadeOut'}>
 
@@ -213,6 +264,36 @@ class Seventh extends Component {
           <div className = {this.state.pressText ? 'fadeIn' : 'fadeOut'}>
             <img src={pressText} className="Seventh-Press"/>
           </div>
+        : null}
+
+
+
+        {this.state.text1Active ?
+          <div className = {this.state.text1Active ? 'fadeIn' : 'fadeOut'}>
+            <img src={text1} className="Seventh-Text1" onClick = {this.handleText1Click.bind(this)}/>
+          </div>
+        : null}
+
+        {this.state.text2Active ?
+          <div className = {this.state.text2Active ? 'fadeIn' : 'fadeOut'}>
+            <img src={text2} className="Seventh-Text2" onClick = {this.handleText2Click.bind(this)}/>
+          </div>
+        : null}
+
+        {this.state.text3Active ?
+          <div className = {this.state.text3Active ? 'fadeIn' : 'fadeOut'}>
+            <img src={text3} className="Seventh-Text3" onClick = {this.handleText3Click.bind(this)}/>
+          </div>
+        : null}
+
+        {this.state.text4Active ?
+          <div className = {this.state.text4Active ? 'fadeIn' : 'fadeOut'}>
+            <img src={text4} className="Seventh-Text4" onClick = {this.handleText4Click.bind(this)}/>
+          </div>
+        : null}
+
+        {this.state.textCrackle ?
+            <img src={crackle} className="Seventh-Crackle"/>
         : null}
       </div>
     );

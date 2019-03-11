@@ -94,3 +94,76 @@
   opacity: 1;
   animation: fade 2s infinite;
 }
+
+
+.Seventh-Text1 {
+  position: absolute;
+  height: 7.2%;
+  width: 23.8%;
+  top: 20.7%;
+  left:38%;
+
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.Seventh-Text1:hover {
+  opacity: .5;
+  transition: 0.3s;
+}
+
+.Seventh-Text2 {
+  position: absolute;
+  height: 7.2%;
+  width: 23.8%;
+  top: 20.7%;
+  left:38%;
+
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.Seventh-Text2:hover {
+  opacity: .5;
+  transition: 0.3s;
+}
+
+.Seventh-Text3 {
+  position: absolute;
+  height: 7.2%;
+  width: 23.8%;
+  top: 20.7%;
+  left:38%;
+
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.Seventh-Text3:hover {
+  opacity: .5;
+  transition: 0.3s;
+}
+
+.Seventh-Text4 {
+  position: absolute;
+  height: 7.2%;
+  width: 14.8%;
+  top: 20.7%;
+  left: 41.5%;
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.Seventh-Text4:hover {
+  opacity: .5;
+  transition: 0.3s;
+}
+
+.Seventh-Crackle {
+  position: absolute;
+  top: 16.3%;
+  left: 34.5%;
+  height: 16%;
+  width: 29%;
+
+}

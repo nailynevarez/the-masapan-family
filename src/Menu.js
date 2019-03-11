@@ -15,6 +15,7 @@ export default class Menu extends Component {
     this.state = {
       showMenu: true,
       showButtonHand: true,
+      isPageActive: true,
     };
   }
 
@@ -25,6 +26,7 @@ export default class Menu extends Component {
     setTimeout(() => {
       this.setState({
         showMenu: false,
+        isPageActive: false,
       });
     }, 1500);
     let pageName = "first";
@@ -34,7 +36,7 @@ export default class Menu extends Component {
 
   render() {
     return (
-      <div>
+      <div className = {this.state.isPageActive ? 'fadeIn' : 'fadeOut'}>
         <div className = {this.state.showMenu ? 'fadeIn' : 'fadeOutCircle'}>
           <img src={circle} className="Menu-Circle" alt="circle" />
         </div>

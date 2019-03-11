@@ -17,6 +17,8 @@ import text3 from './Third-3.png';
 import text4 from './Third-4.png';
 import arrow from './Third-Arrow.gif';
 import crackle from './Third-Text.gif';
+import doorClose from './doorClose.mp3';
+import crackleSound from './crackle.mp3';
 
 
 
@@ -349,6 +351,8 @@ export default class Third extends Component {
     const dragHandlers = {onStart: this.onStart.bind(this), onStop: this.onStop.bind(this)};
     return (
       <div className = {this.state.isPageActive ? 'fadeIn' : 'fadeOut'}>
+      {this.state.isCrackle ? <audio id = "audioCrackle" src={crackleSound} controls autoPlay/> : null}
+      {this.state.isPageActive ? <audio src={doorClose} controls autoPlay/> : null}
         <img src={background} className="Third-Background" alt="background"/>
 
         {this.state.isText1Active ?

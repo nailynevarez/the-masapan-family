@@ -18,6 +18,8 @@ import pic5 from './Fifth-5.png';
 import pic6 from './Fifth-6.png';
 import pic7 from './Fifth-7.png';
 import pic8 from './Fifth-8.png';
+import crackle from './crackle.mp3';
+
 
 class Fifth extends Component {
   constructor(props){
@@ -59,17 +61,27 @@ class Fifth extends Component {
     if (this.state.canPress == true) {
     this.setState({
       isMaking: true,
-      isHandsStill: false,
-      text5Active: false,
     });
 
     setTimeout(() => {
       this.setState({
-        isMaking: false,
+        isHandsStill: false,
+        text5Active: false,
+      });
+    }, 50);
+
+    setTimeout(() => {
+      this.setState({
         isHandsStill: true,
         text5Active: true,
       });
     }, 3500);
+
+    setTimeout(() => {
+      this.setState({
+        isMaking: false,
+      });
+    }, 3550);
   }
   }
 
@@ -197,6 +209,8 @@ class Fifth extends Component {
 
     return (
       <div className = {this.state.isPageActive ? 'fadeIn' : 'fadeOut'}>
+
+        {this.state.textCrackle ? <audio id = "audioCrackle" src={crackle} controls autoPlay/> : null}
         {this.state.isHandsStill ?
           <img src={still} className="Fifth-Background" alt="background" onKeyDown = {this.onKeyPressed.bind(this)}/>
         : null}

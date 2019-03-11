@@ -15,6 +15,7 @@ import stackText from './Fourth-SheetText.png';
 import arrow from './Third-Arrow.gif';
 import text from './Fourth-Text.png';
 import textCrackle from './Fourth-Text.gif';
+import crackle from './crackle.mp3';
 
 class Fourth extends Component {
   constructor(props){
@@ -179,7 +180,7 @@ class Fourth extends Component {
   render() {
     return (
       <div className = {this.state.isPageActive ? 'fadeIn' : 'fadeOut'}>
-
+        {this.state.showCrackle ? <audio id = "audioCrackle" src={crackle} controls autoPlay/> : null}
         <img src={background} className="Fourth-Background" alt="background"/>
 
         {this.state.showCrackle ? <img src={textCrackle} className="Fourth-TextCrackle"/> : null }

@@ -19,6 +19,7 @@ import text2 from "./Seventh-Text2.png";
 import text3 from "./Seventh-Text3.png";
 import text4 from "./Seventh-Text4.png";
 import crackle from "./Seventh-Crackle.gif";
+import crackleSound from './crackle.mp3';
 
 
 
@@ -64,19 +65,35 @@ class Seventh extends Component {
      if(this.state.canPress == true) {
      this.setState({
        isMaking: true,
-       isHandsStill: false,
-       pressText: false,
+
 
      });
 
      setTimeout(() => {
        this.setState({
-         isMaking: false,
+         isHandsStill: false,
+         pressText: false,
+
+       });
+     }, 50);
+
+     setTimeout(() => {
+       this.setState({
+
          isHandsStill: true,
          pressText: true,
 
        });
      }, 3500);
+
+     setTimeout(() => {
+       this.setState({
+         isMaking: false,
+
+       });
+     }, 3550);
+
+
    }
  }
 
@@ -208,7 +225,7 @@ class Seventh extends Component {
 
     return (
       <div className = {this.state.isPageActive ? 'fadeIn' : 'fadeOut'}>
-
+      {this.state.textCrackle ? <audio id = "audioCrackle" src={crackleSound} controls autoPlay/> : null}
         {this.state.isHandsStill ?
           <img src={still} className="Fifth-Background" alt="background" onKeyDown = {this.onKeyPressed.bind(this)}/>
         : null}

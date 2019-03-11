@@ -20,6 +20,7 @@ import door7 from './Second-Door7.png';
 import door8 from './Second-Door8.png';
 import door9 from './Second-Door9.png';
 import door10 from './Second-Door10.png';
+import doorClose from './doorClose.mp3';
 
 
 

@@ -19,6 +19,7 @@ import pic3 from './Sixth-3.png';
 import pic4 from './Sixth-4.png';
 import pic5 from './Sixth-5.png';
 import crackle from './Sixth-Crackle.gif';
+import crackleSound from './crackle.mp3';
 
 
 class Sixth extends Component {
@@ -120,6 +121,7 @@ class Sixth extends Component {
 
     return (
       <div className = {this.state.isPageActive ? 'fadeIn' : 'fadeOut'}>
+        {this.state.isCrackle ? <audio id = "audioCrackle" src={crackleSound} controls autoPlay/> : null}
         <img src={background} className="Sixth-Background" alt="background"/>
 
 

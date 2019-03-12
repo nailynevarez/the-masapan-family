@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+http://elegant-agnesi-d3a70a.netlify.com/* http://themasapanfamily.com/:splat 301!

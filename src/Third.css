@@ -12,6 +12,16 @@
   width: 10%;
 }
 
+.Third-dragSupplies {
+  position: absolute;
+  width: 20%;
+  height: 4%;
+  top: 65.5%;
+  left: 41%;
+  opacity: 1;
+  animation: fade 2s infinite;
+}
+
 .Third-SmallBox {
   position: absolute;
   top: 87%;

@@ -20,7 +20,7 @@ import door7 from './Second-Door7.png';
 import door8 from './Second-Door8.png';
 import door9 from './Second-Door9.png';
 import door10 from './Second-Door10.png';
-import doorClose from './doorClose.mp3';
+
 
 
 
@@ -238,6 +238,8 @@ export default class Second extends Component {
   render() {
     return (
       <div className = {this.state.isPageActive ? 'fadeIn' : 'fadeOut'}>
+
+
         <img src={hallway} className="Second-Hallway" alt="hallway"/>
         {this.state.door10 ? <img src={door1} className="Doors"/> : null}
         {this.state.door1 ? <img src={door1} className="Doors"/> : null}

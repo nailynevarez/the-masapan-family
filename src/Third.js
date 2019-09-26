@@ -19,6 +19,7 @@ import arrow from './Third-Arrow.gif';
 import crackle from './Third-Text.gif';
 import doorClose from './doorClose.mp3';
 import crackleSound from './crackle.mp3';
+import dragSupplies from './Third-DragSupplies.png';
 
 
 
@@ -69,8 +70,9 @@ export default class Third extends Component {
       bigBoxTable: false,
       flour1Table: false,
       flour2Table: false,
-      carton1: false,
-      carton2: false,
+      carton1Table: false,
+      carton2Table: false,
+      showDragSupplies: false,
     };
   }
 
@@ -83,6 +85,9 @@ export default class Third extends Component {
       }
     });
     this.checkIfTable();
+    this.setState({
+          peanutTable: true,
+        });
   }
 
   handleBigBoxDrag = (e, ui) => {
@@ -94,6 +99,9 @@ export default class Third extends Component {
       }
     });
     this.checkIfTable();
+    this.setState({
+          bigBoxTable: true,
+        });
   }
 
   handleSmallBoxDrag = (e, ui) => {
@@ -105,6 +113,9 @@ export default class Third extends Component {
       }
     });
     this.checkIfTable();
+    this.setState({
+          smallBoxTable: true,
+        });
   }
 
   handleFlour1Drag = (e, ui) => {
@@ -116,6 +127,9 @@ export default class Third extends Component {
       }
     });
     this.checkIfTable();
+    this.setState({
+          flour1Table: true,
+        });
   }
 
   handleFlour2Drag = (e, ui) => {
@@ -127,6 +141,9 @@ export default class Third extends Component {
       }
     });
     this.checkIfTable();
+    this.setState({
+          flour2Table: true,
+        });
   }
 
   handleCarton1Drag = (e, ui) => {
@@ -138,6 +155,9 @@ export default class Third extends Component {
       }
     });
     this.checkIfTable();
+    this.setState({
+          carton1Table: true,
+        });
   }
 
   handleCarton2Drag = (e, ui) => {
@@ -149,8 +169,12 @@ export default class Third extends Component {
       }
     });
     this.checkIfTable();
+    this.setState({
+          carton2Table: true,
+        });
   }
 
+//checkIfTable
   checkIfTable = () => {
 
     if (
@@ -161,124 +185,128 @@ export default class Third extends Component {
       this.state.carton1Table == true &&
       this.state.carton2Table == true
     ) {
+      this.setState({
+            showDragSupplies: false,
+          });
+
       setTimeout(() => {
         this.handleSwitchScene();
-      }, 2000);
+      }, 4000);
     }
-
-    //peanut
-    if (this.state.peanutPosition.x.toFixed(0) > -40 && this.state.peanutPosition.x.toFixed(0) < 30 &&
-        this.state.peanutPosition.x.toFixed(0) > -100 && this.state.peanutPosition.x.toFixed(0) < 100 &&
-        this.state.peanutPosition.y.toFixed(0) > -400 && this.state.peanutPosition.y.toFixed(0) < -212
-        ) {
-      this.setState({
-        peanutTable: true,
-      });
-    }
-    else {
-      this.setState({
-        peanutTable: false,
-      });
-    }
-
-    //big Box
-    if (this.state.bigBoxPosition.x.toFixed(0) > -80 && this.state.bigBoxPosition.x.toFixed(0) < -15 &&
-        this.state.bigBoxPosition.y.toFixed(0) > -400 && this.state.bigBoxPosition.y.toFixed(0) < -230 ||
-        this.state.bigBoxPosition.x.toFixed(0) > -140 && this.state.bigBoxPosition.x.toFixed(0) < 30 &&
-        this.state.bigBoxPosition.y.toFixed(0) > -400 && this.state.bigBoxPosition.y.toFixed(0) < -230
-        ) {
-      this.setState({
-        bigBoxTable: true,
-      });
-    }
-    else {
-      this.setState({
-        bigBoxTable: false,
-      });
-    }
-
-    //small Box
-    if (this.state.smallBoxPosition.x.toFixed(0) > -100 && this.state.smallBoxPosition.x.toFixed(0) < -30 &&
-        this.state.smallBoxPosition.y.toFixed(0) > -420 && this.state.smallBoxPosition.y.toFixed(0) < -250 ||
-        this.state.smallBoxPosition.x.toFixed(0) > -160 && this.state.smallBoxPosition.x.toFixed(0) < 25 &&
-        this.state.smallBoxPosition.y.toFixed(0) > -420 && this.state.smallBoxPosition.y.toFixed(0) < -250
-        ) {
-      this.setState({
-        smallBoxTable: true,
-      });
-    }
-    else {
-      this.setState({
-        smallBoxTable: false,
-      });
-    }
-
-    //flour 1
-    if (this.state.flour1Position.x.toFixed(0) > 30 && this.state.flour1Position.x.toFixed(0) < 90 &&
-        this.state.flour1Position.y.toFixed(0) > -420 && this.state.flour1Position.y.toFixed(0) < -240 ||
-        this.state.flour1Position.x.toFixed(0) > -30 && this.state.flour1Position.x.toFixed(0) < 150 &&
-        this.state.flour1Position.y.toFixed(0) > -420 && this.state.flour1Position.y.toFixed(0) < -240
-        ) {
-      this.setState({
-        flour1Table: true,
-      });
-    }
-    else {
-      this.setState({
-        flour1Table: false,
-      });
-    }
-
-    //flour 2
-    if (this.state.flour2Position.x.toFixed(0) > 18 && this.state.flour2Position.x.toFixed(0) < 80 &&
-        this.state.flour2Position.y.toFixed(0) > -430 && this.state.flour2Position.y.toFixed(0) < -260 ||
-        this.state.flour2Position.x.toFixed(0) > -44 && this.state.flour2Position.x.toFixed(0) < 140 &&
-        this.state.flour2Position.y.toFixed(0) > -430 && this.state.flour2Position.y.toFixed(0) < -260
-        ) {
-      this.setState({
-        flour2Table: true,
-      });
-    }
-    else {
-      this.setState({
-        flour2Table: false,
-      });
-    }
-
-    //carton 1
-    if (this.state.carton1Position.x.toFixed(0) > -30 && this.state.carton1Position.x.toFixed(0) < 30 &&
-        this.state.carton1Position.y.toFixed(0) > -420 && this.state.carton1Position.y.toFixed(0) < -230 ||
-        this.state.carton1Position.x.toFixed(0) > -80 && this.state.carton1Position.x.toFixed(0) < 70 &&
-        this.state.carton1Position.y.toFixed(0) > -420 && this.state.carton1Position.y.toFixed(0) < -230
-        ) {
-      this.setState({
-        carton1Table: true,
-      });
-    }
-    else {
-      this.setState({
-        carton1Table: false,
-      });
-    }
-
-    //carton 2
-    if (this.state.carton2Position.x.toFixed(0) > -50 && this.state.carton2Position.x.toFixed(0) < 20 &&
-        this.state.carton2Position.y.toFixed(0) > -430 && this.state.carton2Position.y.toFixed(0) < -230 ||
-        this.state.carton2Position.x.toFixed(0) > -100 && this.state.carton2Position.x.toFixed(0) < 50 &&
-        this.state.carton2Position.y.toFixed(0) > -430 && this.state.carton2Position.y.toFixed(0) < -230
-        ) {
-      this.setState({
-        carton2Table: true,
-      });
-    }
-    else {
-      this.setState({
-        carton2Table: false,
-      });
-    }
-    console.log(this.state.carton2Table);
-    console.log(this.state.carton2Position.x.toFixed(0));
-    console.log(this.state.carton2Position.y.toFixed(0));
+    //
+    // //peanut
+    // if (this.state.peanutPosition.x.toFixed(0) > -40 && this.state.peanutPosition.x.toFixed(0) < 30 &&
+    //     this.state.peanutPosition.x.toFixed(0) > -100 && this.state.peanutPosition.x.toFixed(0) < 100 &&
+    //     this.state.peanutPosition.y.toFixed(0) > -400 && this.state.peanutPosition.y.toFixed(0) < -212
+    //     ) {
+    //   this.setState({
+    //     peanutTable: true,
+    //   });
+    // }
+    // else {
+    //   this.setState({
+    //     peanutTable: false,
+    //   });
+    // }
+    //
+    // //big Box
+    // if (this.state.bigBoxPosition.x.toFixed(0) > -80 && this.state.bigBoxPosition.x.toFixed(0) < -15 &&
+    //     this.state.bigBoxPosition.y.toFixed(0) > -400 && this.state.bigBoxPosition.y.toFixed(0) < -230 ||
+    //     this.state.bigBoxPosition.x.toFixed(0) > -140 && this.state.bigBoxPosition.x.toFixed(0) < 30 &&
+    //     this.state.bigBoxPosition.y.toFixed(0) > -400 && this.state.bigBoxPosition.y.toFixed(0) < -230
+    //     ) {
+    //   this.setState({
+    //     bigBoxTable: true,
+    //   });
+    // }
+    // else {
+    //   this.setState({
+    //     bigBoxTable: false,
+    //   });
+    // }
+    //
+    // //small Box
+    // if (this.state.smallBoxPosition.x.toFixed(0) > -100 && this.state.smallBoxPosition.x.toFixed(0) < -30 &&
+    //     this.state.smallBoxPosition.y.toFixed(0) > -420 && this.state.smallBoxPosition.y.toFixed(0) < -250 ||
+    //     this.state.smallBoxPosition.x.toFixed(0) > -160 && this.state.smallBoxPosition.x.toFixed(0) < 25 &&
+    //     this.state.smallBoxPosition.y.toFixed(0) > -420 && this.state.smallBoxPosition.y.toFixed(0) < -250
+    //     ) {
+    //   this.setState({
+    //     smallBoxTable: true,
+    //   });
+    // }
+    // else {
+    //   this.setState({
+    //     smallBoxTable: false,
+    //   });
+    // }
+    //
+    // //flour 1
+    // if (this.state.flour1Position.x.toFixed(0) > 30 && this.state.flour1Position.x.toFixed(0) < 90 &&
+    //     this.state.flour1Position.y.toFixed(0) > -420 && this.state.flour1Position.y.toFixed(0) < -240 ||
+    //     this.state.flour1Position.x.toFixed(0) > -30 && this.state.flour1Position.x.toFixed(0) < 150 &&
+    //     this.state.flour1Position.y.toFixed(0) > -420 && this.state.flour1Position.y.toFixed(0) < -240
+    //     ) {
+    //   this.setState({
+    //     flour1Table: true,
+    //   });
+    // }
+    // else {
+    //   this.setState({
+    //     flour1Table: false,
+    //   });
+    // }
+    //
+    // //flour 2
+    // if (this.state.flour2Position.x.toFixed(0) > 18 && this.state.flour2Position.x.toFixed(0) < 80 &&
+    //     this.state.flour2Position.y.toFixed(0) > -430 && this.state.flour2Position.y.toFixed(0) < -260 ||
+    //     this.state.flour2Position.x.toFixed(0) > -44 && this.state.flour2Position.x.toFixed(0) < 140 &&
+    //     this.state.flour2Position.y.toFixed(0) > -430 && this.state.flour2Position.y.toFixed(0) < -260
+    //     ) {
+    //   this.setState({
+    //     flour2Table: true,
+    //   });
+    // }
+    // else {
+    //   this.setState({
+    //     flour2Table: false,
+    //   });
+    // }
+    //
+    // //carton 1
+    // if (this.state.carton1Position.x.toFixed(0) > -30 && this.state.carton1Position.x.toFixed(0) < 30 &&
+    //     this.state.carton1Position.y.toFixed(0) > -420 && this.state.carton1Position.y.toFixed(0) < -230 ||
+    //     this.state.carton1Position.x.toFixed(0) > -80 && this.state.carton1Position.x.toFixed(0) < 70 &&
+    //     this.state.carton1Position.y.toFixed(0) > -420 && this.state.carton1Position.y.toFixed(0) < -230
+    //     ) {
+    //   this.setState({
+    //     carton1Table: true,
+    //   });
+    // }
+    // else {
+    //   this.setState({
+    //     carton1Table: false,
+    //   });
+    // }
+    //
+    // //carton 2
+    // if (this.state.carton2Position.x.toFixed(0) > -50 && this.state.carton2Position.x.toFixed(0) < 20 &&
+    //     this.state.carton2Position.y.toFixed(0) > -430 && this.state.carton2Position.y.toFixed(0) < -230 ||
+    //     this.state.carton2Position.x.toFixed(0) > -100 && this.state.carton2Position.x.toFixed(0) < 50 &&
+    //     this.state.carton2Position.y.toFixed(0) > -430 && this.state.carton2Position.y.toFixed(0) < -230
+    //     ) {
+    //   this.setState({
+    //     carton2Table: true,
+    //   });
+    // }
+    // else {
+    //   this.setState({
+    //     carton2Table: false,
+    //   });
+    // }
+    // console.log(this.state.carton2Table);
+    // console.log(this.state.carton2Position.x.toFixed(0));
+    // console.log(this.state.carton2Position.y.toFixed(0));
   }
 
   handleSwitchScene = (event) => {
@@ -337,6 +365,7 @@ export default class Third extends Component {
         isText2Active: false,
         isText3Active: false,
         isText4Active: false,
+
       });
     }, 50);
 
@@ -345,6 +374,12 @@ export default class Third extends Component {
         isCrackle: false,
       });
     }, 1000);
+
+    setTimeout(() => {
+      this.setState({
+        showDragSupplies: true,
+      });
+    }, 2000);
   }
 
   render() {
@@ -354,7 +389,7 @@ export default class Third extends Component {
       {this.state.isCrackle ? <audio id = "audioCrackle" src={crackleSound} controls autoPlay/> : null}
       {this.state.isPageActive ? <audio src={doorClose} controls autoPlay/> : null}
         <img src={background} className="Third-Background" alt="background"/>
-
+        {this.state.showDragSupplies ? <img src={dragSupplies} className="Third-dragSupplies"/> : null}
         {this.state.isText1Active ?
           <div className = {this.state.isText1Active ? 'fadeIn' : 'fadeOut'}>
            <img src={text1} className="Third-Text1" onClick = {this.handleText1Click.bind(this)}/>
@@ -408,6 +443,8 @@ export default class Third extends Component {
           <img src={carton2} className="Third-Carton2"/>
         </Draggable>
         </div>
+
+
 
       </div>
 

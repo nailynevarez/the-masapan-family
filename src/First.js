@@ -93,7 +93,7 @@ export default class First extends Component {
 
     handleText2Click = (event) => {
       this.setState({
-        
+
         textGIF2: true,
       });
 

@@ -11,7 +11,7 @@ import Seventh from './Seventh.js';
 import Eighth from './Eighth.js';
 import Ninth from './Ninth.js';
 import Sound from 'react-sound';
-import sound from './song.mov';
+import sound from './mazapanSound.mp3';
 import './App.css';
 
 class App extends Component {
@@ -32,7 +32,7 @@ componentDidMount() {
 
  audioSettings = () => {
    let backgroundAudio=document.getElementById("myaudio");
-   backgroundAudio.volume=0.03;
+   backgroundAudio.volume=0.4;
    document.getElementById("myaudio").loop = true;
  }
 
@@ -81,9 +81,8 @@ componentDidMount() {
       }
     return (
       <div className="App">
-
-      <audio id = "myaudio" src={sound} controls autoPlay/>
-
+      <audio autoPlay controls id = "myaudio" src={sound} type = "audio/mpeg"/>
+      <script> document.getElementById('myaudio').play(); </script>
       {component}
       </div>
     );
